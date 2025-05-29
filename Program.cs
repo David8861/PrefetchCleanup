@@ -19,7 +19,7 @@
 
                 Console.WriteLine("Cleaning...\n");
 
-                string[] filePaths = Directory.GetFiles("C:\\Windows\\Prefetch"); 
+                string[] filePaths = Directory.GetFiles("C:\\Windows\\Prefetch");
                 // Defines a filepath, and grabs files from indicated location
 
                 // For each string file in the chosen directory, delete it from that directory
@@ -27,13 +27,16 @@
                 (string filePath in filePaths)
                     File.Delete(filePath);
 
-                Console.WriteLine("Exiting...\n");
-
+                Console.WriteLine("Done. Press any key to exit...\n");
+                Console.ReadLine();
+                // Waits for user input to exit
             }
 
             if (userchoice == "No") // Exits program if user inputs "No"
             {
-                Console.WriteLine("Exiting...\n");
+                Console.WriteLine("Press any key to exit...\n");
+                Console.ReadLine();
+                // Waits for user input to exit
             }
         }
 

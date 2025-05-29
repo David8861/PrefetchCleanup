@@ -11,5 +11,5 @@
 
 ### Security
 
-#### Note** Administrator privileges have been written into this applications manifest file.
-#### Running any executable involved in purging files/folders in C:\Windows will require heightened permissions.
+##### Note** Administrator privileges have been written into this applications manifest file.
+##### Running any executable involved in purging files/folders in C:\Windows will require heightened permissions.

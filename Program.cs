@@ -11,7 +11,11 @@
             string? userchoice, userchoice2;
 
 
-            Console.WriteLine("Prefetch Cleaner.\n David Amato. All Rights Reserved.\n");
+
+
+            Console.WriteLine("Prefetch Cleaner.");
+            Console.WriteLine("David Amato. All Rights Reserved.\n");
+
             /* If the user inputs "Yes", the program will begin */
             Console.WriteLine("Would you like to permanently delete all files in your Prefetch folder? Enter 'Yes' to Wipe.\n");
             userchoice = Console.ReadLine(); // Collects user's response
@@ -22,6 +26,7 @@
                 Console.WriteLine("Enter 'y' to confirm.\n");
                 userchoice2 = Console.ReadLine();
 
+                // Collects user's second response, for confirmation to run cleanup
                 if (userchoice2 == "y")
                 {
                     Console.WriteLine("Cleaning...\n");
@@ -48,7 +53,6 @@
 
 
             }
-
 
             if (userchoice == "No") // Exits program if user inputs "No"
             {

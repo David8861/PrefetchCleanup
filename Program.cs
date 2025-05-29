@@ -1,30 +1,30 @@
-﻿using System;
-using System.IO;
-using System.Linq.Expressions;
-
-namespace PrefetchCleanup
+﻿namespace PrefetchCleanup
 {
 
-    public class Cleanup
+    public class Cleanup // Defines a public project class 
     {
-
         public static void Main(string[] args)
         {
-            ArgumentNullException.ThrowIfNull(args);
-            string? userchoice, userchoice2;
+            ArgumentNullException.ThrowIfNull(args); //Exception inititated, if Main args fail
+
+            /* Strings for user input, and for defining 'Yes' or 'No; inputs */
+            string? userchoice;
             string Yes = "Yes";
             string No = "No";
 
-            Console.WriteLine("Would you like to wipe your Prefetch folder? Enter 'Yes' to Wipe.\n");
-            userchoice = Console.ReadLine();
+            /* If the user inputs "Yes", the program will begin */
+            Console.WriteLine("Would you like to permanently delete all files in your Prefetch folder? Enter 'Yes' to Wipe.\n");
+            userchoice = Console.ReadLine(); // Collects user's response
 
             if (userchoice == Yes)
             {
 
                 Console.WriteLine("Cleaning...\n");
 
-                string[] filePaths = Directory.GetFiles("C:\\Windows\\Prefetch");
+                string[] filePaths = Directory.GetFiles("C:\\Windows\\Prefetch"); 
+                // Defines a filepath, and grabs files from indicated location
 
+                // For each string file in the chosen directory, delete it from that directory
                 foreach
                 (string filePath in filePaths)
                     File.Delete(filePath);
@@ -32,33 +32,12 @@ namespace PrefetchCleanup
 
             }
 
-            Console.WriteLine("Would you also like to Delete files in your Recycle Bin? Enter 'Yes' again.");
-            userchoice2 = Console.ReadLine();
-
-            if (userchoice2 == Yes)
+            if (userchoice == No) // Exits program if user inputs "No"
             {
-
-                string[] RecyclePaths = Directory.GetFiles("C:\\$Recycle.Bin");
-
-                foreach (string filePath in RecyclePaths)
-                    File.Delete(filePath);
-
-            if (userchoice2 == No)
-                {
-
-                    Console.WriteLine("Exiting...\n");
-
-                }
-
-
-
-                if (userchoice == No)
-                {
-                    Console.WriteLine("Exiting...\n");
-                }
+                Console.WriteLine("Exiting...\n");
             }
-
         }
 
-        }
     }
+
+}

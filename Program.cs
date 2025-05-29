@@ -10,7 +10,7 @@ namespace PrefetchCleanup
 
         public static void Main(string[] args)
         {
-
+            ArgumentNullException.ThrowIfNull(args);
             string? userchoice, userchoice2;
             string Yes = "Yes";
             string No = "No";
@@ -23,7 +23,7 @@ namespace PrefetchCleanup
 
                 Console.WriteLine("Cleaning...\n");
 
-                string[] filePaths = Directory.GetFiles("C:\\Windows\\prefetch");
+                string[] filePaths = Directory.GetFiles("C:\\Windows\\Prefetch");
 
                 foreach
                 (string filePath in filePaths)
@@ -38,9 +38,9 @@ namespace PrefetchCleanup
             if (userchoice2 == Yes)
             {
 
-                string[] Paths = Directory.GetFiles("C:\\$Recycle.Bin");
+                string[] RecyclePaths = Directory.GetFiles("C:\\$Recycle.Bin");
 
-                foreach (string filePath in Paths)
+                foreach (string filePath in RecyclePaths)
                     File.Delete(filePath);
 
             if (userchoice2 == No)

@@ -9,14 +9,12 @@
 
             /* Strings for user input, and for defining 'Yes' or 'No; inputs */
             string? userchoice;
-            string Yes = "Yes";
-            string No = "No";
 
             /* If the user inputs "Yes", the program will begin */
             Console.WriteLine("Would you like to permanently delete all files in your Prefetch folder? Enter 'Yes' to Wipe.\n");
             userchoice = Console.ReadLine(); // Collects user's response
 
-            if (userchoice == Yes)
+            if (userchoice == "Yes")
             {
 
                 Console.WriteLine("Cleaning...\n");
@@ -29,10 +27,11 @@
                 (string filePath in filePaths)
                     File.Delete(filePath);
 
+                Console.WriteLine("Exiting...\n");
 
             }
 
-            if (userchoice == No) // Exits program if user inputs "No"
+            if (userchoice == "No") // Exits program if user inputs "No"
             {
                 Console.WriteLine("Exiting...\n");
             }

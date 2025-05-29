@@ -8,6 +8,23 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <Configurations>Debug;Release;Prefetch Cleaner</Configurations>
     <Platforms>AnyCPU;x64</Platforms>
+    <ApplicationIcon>Prefetch Cleaner.ico</ApplicationIcon>
+    <Title>Prefetch Cleaner</Title>
+    <Company>$(David Amato)</Company>
+    <Product>$(Prefetch Cleaner)</Product>
+    <Copyright>David Amato. All Rights Reserved.</Copyright>
+    <PackageIcon>Prefetch Cleaner.png</PackageIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Prefetch Cleaner.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\Users\biggr\Desktop\Prefetch Cleaner.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>

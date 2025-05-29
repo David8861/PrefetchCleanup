@@ -10,8 +10,8 @@
             /* Strings for user input, and for defining 'Yes' or 'No; inputs */
             string? userchoice, userchoice2;
 
-
-
+            /* Force text color to appear white in console */
+            Console.ForegroundColor = ConsoleColor.White;
 
             Console.WriteLine("Prefetch Cleaner.");
             Console.WriteLine("David Amato. All Rights Reserved.\n");

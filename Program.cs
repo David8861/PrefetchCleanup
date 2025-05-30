@@ -17,7 +17,7 @@
             Console.WriteLine("David Amato. All Rights Reserved.\n");
 
             /* If the user inputs "Yes", the program will begin */
-            Console.WriteLine("Would you like to permanently delete all files in your Prefetch folder? Enter 'Yes' to Wipe.\n");
+            Console.WriteLine("Would you like to destroy all files in your Prefetch folder? Enter 'Yes' to Wipe.\n");
             userchoice = Console.ReadLine(); // Collects user's response
 
             if (userchoice == "Yes")
